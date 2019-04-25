@@ -1,6 +1,19 @@
 * {
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
 body {
   background-color: #eeeeee;
   margin: 0 auto;
@@ -13,11 +26,11 @@ body {
 .navigation-container {
   display: flex;
   position: fixed;
+  width: 100vw;
   top: 0;
+  left: -5px;
   background-color: white;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
+  padding: 20px 50px;
 }
 .navigation-list {
   padding: 0;
@@ -27,11 +40,37 @@ body {
   justify-content: space-between;
   margin: 0;
 }
+.--top li {
+  display: flex;
+  white-space: nowrap;
+  padding: 5px;
+}
+.--top li span {
+  margin-left: 10px;
+}
+.--top li span:hover {
+  cursor: pointer;
+}
+.--top a {
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: grey;
+  font-size: 0.8em;
+  line-height: 30px;
+}
+.navigation-list img {
+  height: 30px;
+}
 .navigation-left {
   flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .navigation-right {
   flex-basis: 30%;
+  height: 100%;
 }
 .navigation-item {
   padding: 10px 10px 0 10px;
@@ -54,8 +93,7 @@ body {
   height: 20px;
 }
 .navigation-logo {
-  object-fit: cover;
-  height: 100%;
+  object-fit: contain;
   width: 100%;
 }
 #date {
@@ -80,6 +118,10 @@ h4 {
 .top-section {
   flex-basis: 60%;
   overflow: hidden;
+  padding: 5px;
+}
+.top-section article {
+  background-color: #f8f8f8;
 }
 .aside-left,
 .aside-right {
@@ -87,6 +129,22 @@ h4 {
   max-height: 100%;
   text-overflow: clip;
   overflow: scroll;
+  overflow-x: hidden;
+}
+.aside-left-title {
+  padding: 5px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-transform: initial;
+  color: black;
+  font-weight: initial;
+}
+.aside-left-text {
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
 }
 .closed {
   display: none !important;
@@ -98,10 +156,9 @@ h4 {
 .aside-right-content {
   padding-left: 15px;
 }
-.aside-left-text {
-  max-height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.aside-right-content div {
+  margin-bottom: 10px;
+  background-color: #f8f8f8;
 }
 .aside-right-buttons {
   list-style-type: none;
@@ -112,7 +169,9 @@ h4 {
 }
 .section-title {
   color: #e74c3c;
-  padding: 10px;
+  padding: 10px 0 10px 0;
+  margin-left: 10px;
+  margin-right: 10px;
   border-bottom: 1px solid #e74c3c;
 }
 .aside-right-buttons li {
@@ -124,20 +183,34 @@ h4 {
   width: 100%;
   height: 400px;
   display: flex;
-  padding: 5px;
+  margin-bottom: 5px;
 }
-.main-article img {
+.main-article-content {
+  width: 40%;
+}
+.article-img {
+  height: 100%;
+}
+.article-img img {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .bottom-articles-container {
   width: 100%;
   height: 300px;
   display: flex;
+  justify-content: space-between;
 }
 .bottom-articles {
-  flex-basis: 33%;
+  flex-basis: 33.33%;
   height: 100%;
   padding: 5px;
+}
+.bottom-articles div img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
 }
 .bottom-articles p {
   text-overflow: ellipsis;
@@ -164,16 +237,21 @@ h4 {
 }
 .bottom-section-container {
   margin-bottom: 20px;
+
   background-color: white;
 }
 .bottom-section {
   display: flex;
+}
+.footer-navigation img {
+  width: 25%;
 }
 .footer-navigation ul {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
   align-items: center;
+  white-space: nowrap;
   padding: 0;
 }
 .footer-navigation ul a {
@@ -185,8 +263,8 @@ h4 {
   color: grey;
 }
 footer {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 0 auto;
+  width: 75%;
 }
 .footer-contact {
   display: flex;
@@ -217,6 +295,33 @@ address {
 }
 .address-search {
   flex-basis: 50%;
+}
+.address-search-input {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.address-search-input input {
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+}
+.address-search-input button {
+  padding: 0 15px 0 15px;
+  color: white;
+  border: 1px solid #e74c3c;
+  background-color: #e74c3c;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.address-search-input button:hover {
+  background-color: white;
+  color: #e74c3c;
+}
+.address-search-social {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 .address-contact {
   display: flex;

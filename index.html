@@ -10,11 +10,14 @@
   <body>
     <nav class="navigation-container">
       <div class="navigation-left">
-        <div class="navigation-list">
-          <p id="date"></p>
-          <p>ostali linkovi</p>
-          <p>search i social</p>
-        </div>
+        <ul class="navigation-list --top">
+          <li id="date"></li>
+          <li><img src="img/cloud.png"><a href="#">vremenska prognoza</a></li>
+          <li><img src="img/putevi.png"><a href="#">stanje na putevima</a></li>
+          <li><img src="img/pay.png"> <a href="#">kursna lista</a></li>
+          <li><img src="img/snn.png"><a href="#"> pošalji vijest</a></li>
+          <li><span><img src="img/search.png"></span><span><img src="img/fb.png"></span><span><img src="img/tw.png"></span><span><img src="img/yt.png"></span></li>
+        </ul>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a href="#"><img src="img/home.png"/></a>
@@ -33,7 +36,7 @@
       <div class="navigation-right">
         <img
           class="navigation-logo"
-          src="https://via.placeholder.com/500x100"
+          src="img/logo.png"
         />
       </div>
     </nav>
@@ -41,7 +44,7 @@
       <div class="container">
         <div class="top-section-container">
           <aside class="aside-left">
-            <h3>Izdvojeno</h3>
+            <h3 class="aside-left-title">Izdvojeno</h3>
             <div class="aside-left-text-container">
               <div class="aside-left-text">
                 <h4>Morbi scelerisque</h4>
@@ -206,7 +209,7 @@
           </aside>
           <section class="top-section">
             <article class="main-article">
-              <div>
+              <div class="main-article-content">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -221,11 +224,16 @@
                   nec consequat lorem.
                 </p>
               </div>
-              <img src="https://via.placeholder.com/500x200" />
+              <div class="article-img">
+                  <img src="https://via.placeholder.com/500x200" />
+              </div>
+              
             </article>
             <div class="bottom-articles-container">
               <article class="bottom-articles">
-                <img src="https://via.placeholder.com/200x150" />
+                <div>
+                    <img src="https://via.placeholder.com/200x150" />
+                </div>
                 <div>
                   <h4>Nunc suscipit magna erat</h4>
                   <p>
@@ -241,7 +249,10 @@
                 </div>
               </article>
               <article class="bottom-articles">
-                <img src="https://via.placeholder.com/200x150" />
+                <div>
+                    <img src="https://via.placeholder.com/200x150" />
+                </div>
+                
                 <div>
                   <h4>Duis aliquet quis est nec suscipit.</h4>
                   <p>
@@ -261,7 +272,10 @@
                 </div>
               </article>
               <article class="bottom-articles">
-                <img src="https://via.placeholder.com/200x150" />
+                <div>
+                    <img src="https://via.placeholder.com/200x150" />
+                </div>
+                
                 <div>
                   <h4>
                     Praesent nec lacinia ligula
@@ -417,7 +431,7 @@
           <li><a href="#">marketing</a></li>
           <li><a href="#">uvjeti korištenja</a></li>
           <li><a href="#">pošalji vijest</a></li>
-          <img src="https://via.placeholder.com/200x100" />
+          <img src="img/logo.png" />
         </ul>
       </div>
       <div class="footer-contact">
@@ -464,13 +478,15 @@
                           </div>
                           <div class="address-search">
                             <h2>Saznajte više</h2>
-                            <input type="text" placeholder="pretraga" />
-                            <button>Traži</button>
-                            <div>
-                              <span>fb</span>
-                              <span>tw</span>
-                              <span>yu</span>
-                              <span>ma</span>
+                            <div class="address-search-input">
+                                <input type="text" placeholder="pretraga" />
+                                <button>Traži</button>
+                            </div>
+                            <div class="address-search-social"> 
+                              <span><img src="img/fb.png"></span>
+                              <span><img src="img/tw.png"></span>
+                              <span><img src="img/yt.png"></span>
+                              <span><img src="img/em.png"></span>
                             </div>
                           </div>
                         </div>
