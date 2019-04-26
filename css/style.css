@@ -85,12 +85,35 @@ body {
 .navigation-item a:hover {
   color: rgba(128, 128, 128, 0.8);
 }
+.navigation-item a:hover + .navigation-item-on-hover {
+  opacity: 1;
+  visibility: visible;
+}
 .navigation-item a:hover img {
   filter: brightness(120%);
 }
 .navigation-item img {
   width: 20px;
   height: 20px;
+}
+.navigation-item-on-hover {
+  position: absolute;
+  list-style-type: none;
+  padding: 25px 10px 10px 25px;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+.navigation-item-on-hover li {
+  margin-bottom: 10px;
+}
+.navigation-item-on-hover:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.navigation-item-on-hover a {
+  padding: 15px 5px;
 }
 .navigation-logo {
   object-fit: contain;

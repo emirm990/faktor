@@ -6,8 +6,7 @@ let dateHolder = document.getElementById("date");
 
 let date = new Date();
 let day = "";
-getDay();
-function getDay() {
+const getDay = () => {
   switch (date.getDay()) {
     case 0:
       day = "Nedjelja";
@@ -31,7 +30,8 @@ function getDay() {
       day = "Subota";
       break;
   }
-}
+};
+getDay();
 let formatedDate = {
   date: date.getDate(),
   month: date.getMonth() + 1,
@@ -41,7 +41,7 @@ let formatedDate = {
 dateHolder.innerHTML = `${formatedDate.day},  ${formatedDate.date}.${
   formatedDate.month
 }.${formatedDate.year}. `;
-console.log(formatedDate);
+
 najcitanije.onclick = () => {
   najcitanije.classList.add("active");
   najnovije.classList.remove("active");
